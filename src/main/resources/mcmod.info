@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "rationcraft",
+    "name": "Ration Craft",
+    "description": "WWII ration items for Minecraft",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["RationCraft"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
