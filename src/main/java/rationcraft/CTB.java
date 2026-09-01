@@ -8,7 +8,7 @@ import rationcraft.misc.CTBTab;
 import java.util.ArrayList;
 import net.minecraft.item.Item;
 
-@Mod(modid = "rationcraft", name = "Ration Craft", version = "1.1")
+@Mod(modid = "rationcraft", name = "Ration Craft", version = "1.2")
 public class CTB {
     public static CTBTab tabmisc;
     public static ArrayList<Item> itemList = new ArrayList<Item>();

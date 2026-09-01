@@ -26,7 +26,8 @@ public class ItemDrinkable extends CTB3DItem {
         this.potionAmps = potionAmplifier;
     }
 
-    public ItemStack onItemUseFinish(ItemStack stack, World world, EntityPlayer player) {
+    @Override
+    public ItemStack onEaten(ItemStack stack, World world, EntityPlayer player) {
         if (!player.capabilities.isCreativeMode) {
             --stack.stackSize;
             ItemStack itemStack = new ItemStack(this.baseItem);

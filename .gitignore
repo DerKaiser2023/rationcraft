@@ -3,6 +3,7 @@
 
 # forge / gradle
 .gradle
+.jdks/
 build/
 out/
 classes/

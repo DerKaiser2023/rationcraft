@@ -34,7 +34,7 @@ public class RecipeLoader {
             new Object[]{new ItemStack(Items.sugar, 3), new ItemStack(Items.dye, 2, 15), new ItemStack(Items.glowstone_dust)});
 
         GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.canteenCup, 1),
-            new Object[]{new ItemStack(Items.iron_ingot, 3)});
+            new Object[]{Items.iron_ingot, Items.iron_ingot, Items.iron_ingot});
 
         GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.canteenCupCoffee, 1),
             new Object[]{new ItemStack(ItemLoader.canteenCup, 1), new ItemStack(ItemLoader.coffeePacket)});
