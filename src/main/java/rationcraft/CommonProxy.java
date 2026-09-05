@@ -10,5 +10,6 @@ public class CommonProxy {
         CTB.tabmisc = new CTBTab("Rations");
         ItemLoader.loadItems(event);
         RecipeLoader.registerRecipes();
+        CTB.tabmisc.item = ItemLoader.kRationDinner;
     }
 }
