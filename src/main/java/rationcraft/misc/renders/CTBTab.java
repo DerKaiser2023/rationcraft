@@ -5,9 +5,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import rationcraft.items.food.ItemRation;
+import rationcraft.loading.ItemLoader;
 
 public class CTBTab extends CreativeTabs {
-    public Item item = null;
+    private long lastTick;
+    private int index;
 
     public CTBTab(String name) {
         super(name);
@@ -15,6 +18,13 @@ public class CTBTab extends CreativeTabs {
 
     @SideOnly(value=Side.CLIENT)
     public Item getTabIconItem() {
-        return this.item != null ? this.item : Items.iron_ingot;
+        long time = System.currentTimeMillis();
+        if (time - this.lastTick > 2000L) {
+            this.lastTick = time;
+            this.index = (this.index + 1) % ItemRation.rations.size();
+        }
+        return this.index >= 0 && this.index < ItemRation.rations.size()
+            ? ItemRation.rations.get(this.index)
+            : (ItemLoader.kRationDinner != null ? ItemLoader.kRationDinner : Items.iron_ingot);
     }
 }
